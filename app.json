@@ -1,0 +1,82 @@
+{
+  "expo": {
+    "name": "DocScanner",
+    "slug": "docscanner",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0D1117"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.docscanner.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSCameraUsageDescription": "DocScanner needs camera access to scan documents.",
+        "NSPhotoLibraryUsageDescription": "DocScanner needs photo library access to import documents."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0D1117"
+      },
+      "package": "com.docscanner.app",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_MEDIA_IMAGES"
+      ],
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "scheme": "docscanner",
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "DocScanner needs camera access to scan your documents."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "DocScanner needs photo library access to import documents."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "DocScanner needs photo library access to save scanned documents.",
+          "savePhotosPermission": "DocScanner needs permission to save scanned documents to your gallery."
+        }
+      ],
+      "expo-barcode-scanner"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "YOUR_PROJECT_ID_HERE"
+      }
+    }
+  }
+}

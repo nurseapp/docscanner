@@ -1,0 +1,51 @@
+# Expo
+.expo/
+dist/
+web-build/
+bare-config.json
+
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.cer
+
+# Metro
+.metro-health-check*
+
+# Debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+.env
+.env.production
+
+# API Keys (IMPORTANT!)
+config/api.ts
+
+# typescript
+*.tsbuildinfo
+
+# Node
+node_modules/
+
+# EAS
+google-service-account.json
+credentials.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
